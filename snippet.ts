@@ -1,3 +1,4 @@
+const tracer = trace.getTracer('your-service-name');
 tracer.startActiveSpan(
   `${this.constructor.name}.your-method-name`,
   { kind: SpanKind.SERVER },

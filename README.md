@@ -41,5 +41,5 @@ Add below (snippet.ts) code inside your service's/worker's methods wherever you 
 
 https://github.com/KaustubhK711/Open-telemetry-nest-integration/blob/63d69865301cdaaa3b2ba26c8238be6ace492a50/snippet.ts
 
-Above code from snippet.ts will gather the active span of the current request and it will add the **child span inside active span**
-And at the end when your logic will completed span.end will close the child span
+The code from snippet.ts will retrieve the active span of the current request and add a child span within it. 
+When your logic is completed, the span.end() method will close the child span.

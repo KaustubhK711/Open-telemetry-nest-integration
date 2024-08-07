@@ -37,19 +37,9 @@ Import the below statement inside your services from where you want traces
 
 `import { SpanKind, trace } from '@opentelemetry/api';`
 
-Add below code inside your services/workers method wherever you want to trace into child spans
+Add below (snippet.ts) code inside your service's/worker's methods wherever you want to trace into child spans
 
-`const tracer = trace.getTracer('your-service-name');`
 
-tracer.startActiveSpan(
-  `${this.constructor.name}.your-method-name`,
-  { kind: SpanKind.SERVER },
-  async (span) => {
-    // Add your logic here
-    //
-    span.end();
-  }
-)
 
-Above code will gather the active span of the current request and it will add the **child span inside active span**
+Above code from snippet.ts will gather the active span of the current request and it will add the **child span inside active span**
 And at the end when your logic will completed span.end will close the child span

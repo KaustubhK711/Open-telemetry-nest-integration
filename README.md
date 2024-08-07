@@ -4,23 +4,29 @@ Open Telemetry Integration in Nest or Node
 
 # Configuration to start exporting the traces for your application
 
-Add import below statement 
-import { startTracing } from './tracing';
+Add import below statement
+
+`import { startTracing } from './tracing';`
 
 Add below method call inside boostrap() or start function of your app
-startTracing();
+
+`startTracing();`
 
 Import below statement in your all controller files where you want traces
-import { TraceMethod } from '../../../decorators/tracing.decorator';
+
+`import { TraceMethod } from '../../../decorators/tracing.decorator';`
 
 Add below custom decorator above all the APIs that you wanted to trace
-@TraceMethod()
+
+`@TraceMethod()`
 
 Add below import statement inside your app.module file
-import { TracingMiddleware } from './middlewares/tracing.middleware';
+
+`import { TracingMiddleware } from './middlewares/tracing.middleware';`
 
 Configure the tracing middleware inside your app.module file by calling below class
-TracingMiddleware
+
+`TracingMiddleware`
 
 # Trace lifecycle of request in one root span and multiple child spans
 
@@ -28,9 +34,13 @@ To trace the request end-to-end in one span and respective services/workers that
 Add below code inside your services and workers
 
 Import the below statement inside your services from where you want traces
-import { SpanKind, trace } from '@opentelemetry/api';
 
-const tracer = trace.getTracer('your-service-name');
+`import { SpanKind, trace } from '@opentelemetry/api';`
+
+Add below code inside your services/workers method wherever you want to trace into child spans
+
+`const tracer = trace.getTracer('your-service-name');`
+
 tracer.startActiveSpan(
   `${this.constructor.name}.your-method-name`,
   { kind: SpanKind.SERVER },

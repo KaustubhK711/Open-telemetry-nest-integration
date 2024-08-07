@@ -39,7 +39,7 @@ Import the below statement inside your services from where you want traces
 
 Add below (snippet.ts) code inside your service's/worker's methods wherever you want to trace into child spans
 
-
+https://github.com/KaustubhK711/Open-telemetry-nest-integration/blob/63d69865301cdaaa3b2ba26c8238be6ace492a50/snippet.ts
 
 Above code from snippet.ts will gather the active span of the current request and it will add the **child span inside active span**
 And at the end when your logic will completed span.end will close the child span

@@ -30,8 +30,7 @@ Configure the tracing middleware inside your app.module file by calling below cl
 
 # Trace lifecycle of request in one root span and multiple child spans
 
-To trace the request end-to-end in one span and respective services/workers that are calling by request into child spans
-Add below code inside your services and workers
+To trace a request end-to-end in one span and create child spans for the respective services/workers called by the request, add the following code inside your services and workers:
 
 Import the below statement inside your services from where you want traces
 

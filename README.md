@@ -6,7 +6,7 @@ Open Telemetry Integration in Nest or Node
 
 Add required packages from package.json file into your project's package.json file and do `npm install`
 
-
+https://github.com/KaustubhK711/Open-telemetry-nest-integration/blob/dabf6aba1efc63d246b40bc313f0756f6359f0ee/package.json
 
 Add import below statement
 

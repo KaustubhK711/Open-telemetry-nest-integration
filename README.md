@@ -4,6 +4,10 @@ Open Telemetry Integration in Nest or Node
 
 # Configuration to start exporting the traces for your application
 
+Add required packages from package.json file into your project's package.json file and do `npm install`
+
+
+
 Add import below statement
 
 `import { startTracing } from './tracing';`

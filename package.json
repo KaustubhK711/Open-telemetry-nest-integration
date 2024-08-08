@@ -8,5 +8,4 @@
   "@opentelemetry/instrumentation-winston": "^0.37.0",
   "@opentelemetry/instrumentation-http": "^0.51.1",
   "@opentelemetry/instrumentation-express": "^0.38.0",
-  "@opentelemetry/api"
 }
